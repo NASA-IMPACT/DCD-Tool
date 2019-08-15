@@ -1,5 +1,4 @@
 # DCD-Tool
-## A tool for finding broken and dropped datasets within CDI
 
 This script is to be used to identify which datasets are either 
 broken and / or dropped from the Climate Data Initiative (CDI) on data.gov/climate.
