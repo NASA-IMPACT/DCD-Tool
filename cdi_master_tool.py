@@ -1,4 +1,3 @@
-
 # Import packages necessary for running code
 import requests
 import json
