@@ -1,5 +1,5 @@
 # DCD-Tool
-##### A tool for finding broken and dropped datasets within CDI.
+## A tool for finding broken and dropped datasets within CDI.
 
 
 This script is to be used to identify which datasets are either 
