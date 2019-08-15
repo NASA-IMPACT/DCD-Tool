@@ -1,15 +1,17 @@
 
 '''
-We want to take CDI API URLS from json master list and parse them.
-Then, we search for the tag in the list that uses "climate5434", with 2 possible
-output values. The first is TRUE, meaning climate5434 is present, therefore
-tagged in data.gov/climate appropriately. The second is FALSE, which means
-climate5434 is not present and needs to be retagged. There will be some URL's
-are broken or have a value of NONE, so first we must subtract those values
-from the whole list and only run valid URLs. You can create a list of broken
-ones to perform QA on and add the correct ones back into the master list,
-effectively adding them back into valid API URLs.
-- Kane Cook 2019
+This script is to be used to identify which datasets are either 
+broken and / or dropped from the Climate Data Initiative (CDI) on data.gov/climate.
+Using the master list json of CDI datasets on github 
+(https://raw.githubusercontent.com/fkcook/cdi_master/master/cdi_master.json), we can
+ping the URLs to check their status. Broken datasets will result in a 403/404 error.
+From there, we parse the working URLs for "climate5434", the tag used to identify if they are 
+still in the climate theme. If not, we add those URLs along with the broken ones to the
+output csv, along with their respective title, name, and cdi subthemes (Arctic, Human Health, etc)
+This csv can be sent to data.gov POC to request to update the links and retag the datasets that belong 
+on data.gov/climate. Manual identification can be used to identify datasets that should be removed, 
+such as V2 when a V3 exists now of that dataset.
+- Kane Cook 2019 (fkcook12@gmail.com)
 '''
 # Import packages necessary for running code
 import requests
