@@ -5,7 +5,7 @@ import urllib
 import csv
 
 # Retrieve "CDI Master List" from GitHub
-github_json = urllib.request.urlopen("https://github.com/NASA-IMPACT/cdi_master/blob/master/cdi_master.json")
+github_json = urllib.request.urlopen("https://raw.githubusercontent.com/NASA-IMPACT/cdi_master/master/cdi_master.json")
 
 # Format json contents
 first_api_opener = json.load(github_json)
